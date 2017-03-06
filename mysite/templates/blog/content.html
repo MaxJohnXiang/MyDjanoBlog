@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %} blog article{% endblock %}
+
+{% block content %}
+<div class="row text-center vertical-middle-sm">
+    <h1>i{{ title }}</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <p class="text-center"><span style="margin-left: 20%">{{ author}}</span>{{ time}}</p>
+    </div>
+    <div class="">{{content}}</div>
+</div>
+<div class="col-xs-6 col-md-4">
+    <h2>哈哈</h2>
+    <p>我的博客</p>
+    <img src="{% static 'img/bj.jpg' %}" alt="aa">
+
+</div>
+
+{% endblock %}
