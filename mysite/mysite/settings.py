@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'account',
+    'password_reset',
+    'ArticleManage',
+
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'static'),
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.163.com'
+EMAIL_HOST_USER='fendoulucky@163.com'
+EMAIL_HOST_PASSWORD='xiangpeng123'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+DEFAULT_FROM_EMAIL="1811274313.com"

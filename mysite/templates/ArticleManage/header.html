@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<div class="container">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand"><img src="{% static 'img/logo.jpg' %}" alt="" width="50" height="50"></a>
+        </div>
+        <div class="">
+            <ul class="nav navbar-nav" role="tablist">
+                <li><a href="">文章</a></li>
+                <li><a href=""></a>PHP</li>
+                <li><a href=""></a>GIT</li>
+                <li><a href=""></a>JAVA</li>
+            </ul>
+            {% if user.is_authenticated %}
+                <li>
+                    <div class="dropdown" style="margin-top:8px">
+                        <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu' data-toggle='dropdown'>{{ user.username }}
+                            <span class='caret'></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'account:password_change' %}">修改密码</a></li>
+                            <li><a href="{% url 'account:my_information' %}">个人信息</a></li>
+                            <li><a href="{% url 'article:article_column' %}">文章管理</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="{% url 'account:user_logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'account:user_login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
