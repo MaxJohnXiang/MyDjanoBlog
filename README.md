@@ -1,6 +1,12 @@
 # MyDjanoBlog
 Django 制作博客
 
++ 注册账号,可多用户使用
+![](http://i1.piimg.com/4851/9befe2c40b12d140.png)
+
++ 改变密码
+![](http://i1.piimg.com/4851/439eff7297c6ed1c.png)
+
 + 登录功能
 ![](http://i1.piimg.com/4851/5cb16dcdfa4a329f.png)
 
@@ -29,3 +35,4 @@ Django 制作博客
 ![](http://p1.bpimg.com/4851/c79408e3e02a5fc8.png)
 
 ![](http://p1.bpimg.com/4851/4e7377fc1627bd98.png)
+
