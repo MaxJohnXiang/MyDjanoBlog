@@ -2,7 +2,7 @@
 <div class="container">
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-hear">
-            <a href="#" class="navbar-brand"><img width="100px" src="{% static 'img/logo.jpg' %}" alt=""></a>
+
         </div>
         <div class="">
             <ul class="nav navbar-nav" role="tablist">
@@ -11,7 +11,8 @@
                 <li><a href="#">Git</a></li>
                 <li><a href="#">Linux</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+
+            <ul class="nav navbar-nav navbar-right text-right">
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'account:my_information' %}"> {{ user.username}}</a></li>
                 <!--这个名字为url起的名字-->
@@ -21,6 +22,7 @@
                 
                 <li><a href="{% url 'account:user_login' %}">Login</a></li>
                 {% endif %}
+
             </ul>
         </div>
     </nav>

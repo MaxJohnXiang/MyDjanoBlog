@@ -7,21 +7,22 @@
         <div class="">
             <ul class="nav navbar-nav" role="tablist">
                 <li><a href="">文章</a></li>
-                <li><a href=""></a>PHP</li>
-                <li><a href=""></a>GIT</li>
-                <li><a href=""></a>JAVA</li>
+                <li><a href="">php</a></li>
+                <li><a href="">git</a></li>
+                <li><a href="">JAVA</a></li>
             </ul>
-            {% if user.is_authenticated %}
+            <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
+                {% if user.is_authenticated %}
                 <li>
                     <div class="dropdown" style="margin-top:8px">
-                        <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu' data-toggle='dropdown'>{{ user.username }}
+                        <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu'
+                                data-toggle='dropdown'>{{ user.username }}
                             <span class='caret'></span>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'account:password_change' %}">修改密码</a></li>
                             <li><a href="{% url 'account:my_information' %}">个人信息</a></li>
                             <li><a href="{% url 'article:article_column' %}">文章管理</a></li>
-
                         </ul>
                     </div>
                 </li>
